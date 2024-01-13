@@ -9,7 +9,9 @@ const Navbar=()=>{
       <Link to="/about">
       <div className=" m-3">About</div>
       </Link>
+      <Link to={"/details"}>
       <img  className=" w-14" src={logo} alt="RR"/>
+      </Link>
       <Link to="/skills">
       <div className=" m-3">Skills</div>
       </Link>
