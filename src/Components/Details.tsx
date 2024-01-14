@@ -38,7 +38,6 @@ const Details = ()=>{
       
     const [info,setinfo]=useState<UserInfo>()
 useEffect(()=>{
-    console.log( import.meta.env.VITE_REACT_APP_TOKEN)
     const octokit = new Octokit({
         auth: import.meta.env.VITE_REACT_APP_TOKEN
     })
