@@ -1,6 +1,17 @@
 import image from "../assets/background.jpg";
 import { Button } from "./ui/button"
 const Home = () => {
+  const url =  "https://rahulrangers.github.io/SMU_PG_Resume_Template.pdf"
+  const downloadresume=()=>{
+    const file = url.split('/').pop()
+    const link = document.createElement('a')
+    link.href=url
+    if(file)
+    link.setAttribute("download",file)
+    document.body.appendChild(link)
+    link.click()
+    link.remove();
+  }
   return (
     <>
     <div
@@ -12,7 +23,7 @@ const Home = () => {
      <div className="font-bold flex flex-wrap md:w-[400px] lg:w-full ">I AM A SECOND YEAR UNDERGRAD AT COMPUTER SCIENCE DEPARTMENT, IIT JODHPUR.</div>
      <div className="font-bold">LOVE TO LEARN AND EXPLORE NEW TECHNOLOGIES</div>
      <div className="py-10 ">
-     <Button>DOWNLOAD RESUME</Button>
+     <Button onClick={downloadresume}>DOWNLOAD RESUME</Button>
      </div>
      </div>
     </div>
