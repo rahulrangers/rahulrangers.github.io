@@ -39,7 +39,7 @@ const Details = ()=>{
     const [info,setinfo]=useState<UserInfo>()
 useEffect(()=>{
     const octokit = new Octokit({
-        auth: import.meta.env.VITE_REACT_APP_TOKEN
+        auth: import.meta.env.VITE_REACT_APP_TOKEN.replaceAll('?','')
     })
 octokit.request('GET /user', {
     headers: {
