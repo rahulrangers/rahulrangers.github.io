@@ -25,6 +25,9 @@ jobs:
       - name: Installing NPM packages
         run: npm ci
 
+      - name: Set up environment variables
+        run: echo "VITE_REACT_APP_TOKEN=${{ secrets.VITE_REACT_APP_TOKEN }}" >> $GITHUB_ENV
+
       - name: Building project
         run: npm run build
 
